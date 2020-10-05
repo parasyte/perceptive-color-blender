@@ -122,22 +122,22 @@ class Color {
 
   get value() {
     return `#${
-      pad(Math.floor(this.linearToGamma(this.r) * 255).toString(16))
+      pad(Math.round(this.linearToGamma(this.r) * 255).toString(16))
     }${
-      pad(Math.floor(this.linearToGamma(this.g) * 255).toString(16))
+      pad(Math.round(this.linearToGamma(this.g) * 255).toString(16))
     }${
-      pad(Math.floor(this.linearToGamma(this.b) * 255).toString(16))
+      pad(Math.round(this.linearToGamma(this.b) * 255).toString(16))
     }`;
   }
 
   get css() {
     console.warn('TODO: Color.css');
     return `rgb(${
-      Math.floor(this.linearToGamma(this.r) * 255)
+      Math.round(this.linearToGamma(this.r) * 255)
     }, ${
-      Math.floor(this.linearToGamma(this.g) * 255)
+      Math.round(this.linearToGamma(this.g) * 255)
     }, ${
-      Math.floor(this.linearToGamma(this.b) * 255)
+      Math.round(this.linearToGamma(this.b) * 255)
     })`;
   }
 }
