@@ -1,0 +1,56 @@
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #333;
+    --text-color: #eee;
+    --border-color: #000;
+    --table-text-color: #ccc;
+    --table-header-row-color: #222;
+    --table-even-row-color: #252525;
+    --table-odd-row-color: #2a2a2a;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background-color: #fff;
+    --text-color: #000;
+    --border-color: #aaa;
+    --table-text-color: #444;
+    --table-header-row-color: #ddd;
+    --table-even-row-color: #e5e5e5;
+    --table-odd-row-color: #eaeaea;
+  }
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+#color-sheet {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+#color-sheet td {
+  border: 1px solid var(--border-color);
+  color: var(--table-text-color);
+}
+
+#color-sheet th, input {
+  background-color: var(--table-header-row-color);
+  border: 1px solid var(--border-color);
+  color: var(--table-text-color);
+}
+
+#color-sheet tr:nth-child(even) {
+  background-color: var(--table-even-row-color);
+}
+
+#color-sheet tr:nth-child(odd) {
+  background-color: var(--table-odd-row-color);
+}
+
+#color-sheet th, td {
+  padding: 2px 12px;
+}

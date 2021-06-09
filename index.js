@@ -131,7 +131,6 @@ class Color {
   }
 
   get css() {
-    console.warn('TODO: Color.css');
     return `rgb(${
       Math.round(this.linearToGamma(this.r) * 255)
     }, ${
